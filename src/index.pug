@@ -1,0 +1,133 @@
+- var descriptionString = '3連休はkosen10sで過ごそう'
+- var titleString = 'kosen10s 3rd anniversary party'
+
+mixin retina-img(src)
+  - var src2x = src.replace(/(\.)[^\.]*$/, "@2x") + src.match(/\.[^\.]*$/);
+  - var src3x = src.replace(/(\.)[^\.]*$/, "@3x") + src.match(/\.[^\.]*$/);
+  img(src=src, srcset=src + " 1x," + src2x + " 2x," + src3x + " 3x")
+
+mixin schedule-day(day_count, title, date)
+  div(class="schedule-day day"+day_count)
+    .schedule-thumbnail
+      +retina-img("img/day" + day_count + ".png")
+    .schedule-detail
+      .schedule-title
+        h4= title
+        span= date
+      if block
+        block
+
+doctype html
+html(lang="ja")
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.css')
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title #{titleString}
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name='description' content=descriptionString)
+    meta(name='keywords' content="kosen10s")
+
+    meta(property='og:title', content=titleString)
+    meta(property='og:type', content='website')
+    meta(property='og:url', content="http://kosen10s.net/3rd-anniversary/")
+    meta(property='og:image', content='http://kosen10s.net/3rd-anniversary/img/ogp.png')
+    meta(property='og:site_name', content=titleString)
+    meta(property='og:description', content=descriptionString)
+    meta(property='twitter:card', content='summary')
+  body
+    header
+      h2
+        +retina-img("img/10s_logo.png")
+      h1
+        +retina-img("img/logo.png")
+
+    section.message
+      h3
+        +retina-img("img/title_emo.png")
+      p
+        | kosen10sが始まって三周年ということで、
+        | kosen10sにおける三周年記念イベントって何があるかなあ…
+        | と考えたのですが、kosenconfやその他の大きなコミュニティとは違って
+        | 僕らはすごく限定的で狭いコミュニティだなあと思いまして。
+        | 高専卒で、しかも同い年しか受け付けないというのは正直すごく門が狭い。
+        | でもそこに「親しみやすさ」「楽しさ」みたいなモノを見出してるから
+        | みんな関わってくれるんだろうなあと。
+      p
+        | だからこそ、(今回は)大きい規模のLT会開催などの門を広げる方向ではなく
+        | 「仲のいい連中」っぽいイメージの三周年記念イベントを行いたい、
+        | ということで友達と過ごすイメージの３日間を企画してみました。
+      p
+        | 今回初参加の人もきっとみんなと仲良くなれるし、
+        | いつもの顔なじみも普通に楽しめると思うんでみんなでともかく遊びましょ！
+
+    section.schedule
+      +schedule-day(1, "お鍋の日", "11.3 (Fri)")
+        p 夕方以前の予定は各位で適当にやっていこう
+        dl
+          dt 17:30
+          dd 集合 (渋谷駅近辺)
+          dt 17:50
+          dd 近所のお店で基本的な買い出し
+          dt 18:40
+          dd 調理開始 @ うなすけの家
+          dt 19:00
+          dd 食べたり飲んだりする
+        p
+          | あとは流れで鍋とかオタクコンテンツをYEAHする
+          br
+          | うなすけの家を燃やす
+
+      +schedule-day(2, "おしゃスポの日", "11.4 (Sat)")
+        p おしゃれスポーツの略 / 主にダーツとビリヤード
+        dl
+          dt 12:00
+          dd 集合 (渋谷駅近辺)
+          dt 12:30
+          dd 近所のお店で基本的な買い出し
+          dt 14:00
+          dd ダーツ
+          dt 18:00
+          dd 夜のガッツリ飲み
+          dt 20:00
+          dd ビリヤード
+        p
+          | あとは流れでオタクカラオケとかをYEAHする
+          br
+          | うなすけの喉を燃やす
+
+      +schedule-day(3, "LT #10の日", "11.5 (Sun)")
+        p @Spicelife社オフィス
+        dl
+          dt 12:40
+          dd 開場 (予定)
+          dt 13:00
+          dd オープニング
+          dt 13:05
+          dd 自己紹介LT (全員必須 / 5分)
+          dd 自由LT (当日参加OK / 自由参加 / 時間は適当)
+          dt 18:00
+          dd 懇親会
+        p
+          | あとは流れでオタクおしゃスポとかをYEAHする
+          br
+          | うなすけの財布を燃やす
+
+    section.connpass
+      p.large 楽しい三連休はkosen10sで
+      a(href="")
+        +retina-img("img/connpass.png")
+      p Slackの#3rd-anniversaryにJoinよろ
+
+    footer
+      ul
+        li
+          a(href="https://twitter.com/kosen10s/") Contact
+        li
+          a(href="http://kosen10s-invite.herokuapp.com") Join us
+      p
+        small
+          | &copy; 2017 kosen10s
+
+    script(src="app.babel.js")

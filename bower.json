@@ -1,0 +1,21 @@
+{
+  "name": "kosen10s_3rd_anniversary",
+  "description": "website for kosen10s",
+  "main": "src/index.pug",
+  "authors": [
+    "denari01"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7"
+  }
+}

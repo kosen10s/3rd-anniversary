@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import 'bootstrap';
+
+$day1-color: #5cd100;
+$day2-color: #0088ee;
+$day3-color: #ff4b68;
+$text-color: #909090;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  line-height: 1.7em;
+}
