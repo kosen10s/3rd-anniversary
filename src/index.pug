@@ -38,10 +38,13 @@ html(lang="ja")
     meta(property='twitter:card', content='summary')
   body
     header
-      h2
-        +retina-img("img/10s_logo.png")
-      h1
-        +retina-img("img/logo.png")
+      .right
+      .left
+        h2
+          +retina-img("img/10s_logo.png")
+        h1
+          +retina-img("img/logo.png")
+        p 2017.11.03 - 05 @ 渋谷近辺
 
     section.message
       h3
@@ -130,4 +133,4 @@ html(lang="ja")
         small
           | &copy; 2017 kosen10s
 
-    script(src="app.babel.js")
+    script(src="js/app.babel.js")

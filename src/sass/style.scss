@@ -11,4 +11,35 @@ $text-color: #909090;
   padding: 0;
   color: $text-color;
   line-height: 1.7em;
+  font-size: 20px;
+}
+
+header {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  .left, .right {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  .right {
+    z-index: 2;
+    background-image: url("../img/brand.png");
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  h2, h1, p {
+    margin-top: 0;
+    padding-left: calc(100% - 600px);
+    max-width: 600px;
+  }
+  h2 {
+    padding: 60px 0 100px calc(100% - 570px);
+  }
+  p {
+    margin-bottom: 100px;
+  }
 }
