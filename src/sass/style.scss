@@ -147,9 +147,7 @@ body {
       }
       background-repeat: no-repeat;
       .schedule-title {
-        @extend .container;
         h4 {
-          margin-left: -20px;
           font-size: 2em;
           font-family: serif;
           color: black;
