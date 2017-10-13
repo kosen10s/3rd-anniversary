@@ -5908,6 +5908,10 @@ body {
     padding: 160px 60px 0;
     background-position: 20px 120px;
     background-repeat: no-repeat; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .schedule .schedule-day .schedule-detail {
+        padding: 40px 60px 60px;
+        background-position: 20px 20px; } }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .schedule .schedule-day .schedule-detail {
         padding: 20px 60px 60px;
@@ -5926,9 +5930,22 @@ body {
         .schedule .schedule-day .schedule-detail .schedule-title h4 {
           font-size: 1.5em; } }
   .schedule .schedule-day.day2 .schedule-detail {
-    background-image: url("../img/day2_title.png"); }
+    background-image: url("../img/day2_title.png");
+    padding: 160px 0 0 120px;
+    background-position: 80px 120px; }
     .schedule .schedule-day.day2 .schedule-detail span, .schedule .schedule-day.day2 .schedule-detail dt {
       color: #0088ee; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .schedule .schedule-day.day2 .schedule-detail {
+        padding: 40px 60px 60px;
+        background-position: 20px 20px; } }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .schedule .schedule-day.day2 .schedule-detail {
+        padding: 20px 60px 60px;
+        background-position: 20px 0; } }
+    @media screen and (max-width: 767px) {
+      .schedule .schedule-day.day2 .schedule-detail {
+        padding: 20px; } }
   .schedule .schedule-day.day1 .schedule-detail {
     background-image: url("../img/day1_title.png"); }
   .schedule .schedule-day.day1 span, .schedule .schedule-day.day1 dt {
