@@ -22,6 +22,7 @@ img {
 body {
   background-image: url("../img/background.png");
   background-position: center top;
+  font-family: Helvetica, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 @media screen and (min-width: $screen-lg-min) {
@@ -123,16 +124,21 @@ body {
   .schedule-day {
     @extend .row;
     .schedule-thumbnail {
-      @extend .col-md-6;
+      @extend .col-md-7;
     }
     .schedule-detail {
-      @extend .col-md-6;
-      padding: 100px 60px 0;
+      @extend .col-md-5;
+      padding: 160px 60px 0;
+      background-position: 20px 120px;
+
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding: 20px 60px 60px;
+        background-position: 20px 0;
+      }
 
       @media screen and (max-width: $screen-xs-max) {
         padding: 20px;
       }
-      background-position: 20px 70px;
       background-repeat: no-repeat;
       .schedule-title {
         @extend .container;
@@ -151,10 +157,10 @@ body {
     }
     &.day2 {
       .schedule-thumbnail {
-        @extend .col-md-push-6;
+        @extend .col-md-push-5;
       }
       .schedule-detail {
-        @extend .col-md-pull-6;
+        @extend .col-md-pull-7;
         background-image: url("../img/day2_title.png");
         span, dt {
           color: $day2-color;

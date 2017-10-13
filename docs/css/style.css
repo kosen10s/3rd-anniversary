@@ -1538,7 +1538,7 @@ pre {
   .row:after, .schedule .schedule-day:after, .schedule .schedule-day dl:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .schedule .schedule-day dl dt, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .schedule .schedule-day .schedule-thumbnail, .schedule .schedule-day .schedule-detail, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .schedule .schedule-day dl dd, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .schedule .schedule-day dl dt, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .schedule .schedule-day .schedule-detail, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .schedule .schedule-day .schedule-thumbnail, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .schedule .schedule-day dl dd, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1807,7 +1807,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .schedule .schedule-day .schedule-thumbnail, .schedule .schedule-day .schedule-detail, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .schedule .schedule-day .schedule-detail, .col-md-6, .col-md-7, .schedule .schedule-day .schedule-thumbnail, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
@@ -1817,11 +1817,11 @@ pre {
     width: 25%; }
   .col-md-4 {
     width: 33.33333%; }
-  .col-md-5 {
+  .col-md-5, .schedule .schedule-day .schedule-detail {
     width: 41.66667%; }
-  .col-md-6, .schedule .schedule-day .schedule-thumbnail, .schedule .schedule-day .schedule-detail {
+  .col-md-6 {
     width: 50%; }
-  .col-md-7 {
+  .col-md-7, .schedule .schedule-day .schedule-thumbnail {
     width: 58.33333%; }
   .col-md-8 {
     width: 66.66667%; }
@@ -1845,9 +1845,9 @@ pre {
     right: 33.33333%; }
   .col-md-pull-5 {
     right: 41.66667%; }
-  .col-md-pull-6, .schedule .schedule-day.day2 .schedule-detail {
+  .col-md-pull-6 {
     right: 50%; }
-  .col-md-pull-7 {
+  .col-md-pull-7, .schedule .schedule-day.day2 .schedule-detail {
     right: 58.33333%; }
   .col-md-pull-8 {
     right: 66.66667%; }
@@ -1869,9 +1869,9 @@ pre {
     left: 25%; }
   .col-md-push-4 {
     left: 33.33333%; }
-  .col-md-push-5 {
+  .col-md-push-5, .schedule .schedule-day.day2 .schedule-thumbnail {
     left: 41.66667%; }
-  .col-md-push-6, .schedule .schedule-day.day2 .schedule-thumbnail {
+  .col-md-push-6 {
     left: 50%; }
   .col-md-push-7 {
     left: 58.33333%; }
@@ -5827,7 +5827,8 @@ img {
 
 body {
   background-image: url("../img/background.png");
-  background-position: center top; }
+  background-position: center top;
+  font-family: Helvetica, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; }
 
 @media screen and (min-width: 1200px) {
   header {
@@ -5904,9 +5905,13 @@ body {
     .schedule {
       width: 1350px; } }
   .schedule .schedule-day .schedule-detail {
-    padding: 100px 60px 0;
-    background-position: 20px 70px;
+    padding: 160px 60px 0;
+    background-position: 20px 120px;
     background-repeat: no-repeat; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .schedule .schedule-day .schedule-detail {
+        padding: 20px 60px 60px;
+        background-position: 20px 0; } }
     @media screen and (max-width: 767px) {
       .schedule .schedule-day .schedule-detail {
         padding: 20px; } }
