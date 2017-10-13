@@ -143,6 +143,7 @@ body {
 
       @media screen and (max-width: $screen-xs-max) {
         padding: 20px;
+        background-position: 0 0;
       }
       background-repeat: no-repeat;
       .schedule-title {
@@ -185,6 +186,7 @@ body {
 
         @media screen and (max-width: $screen-xs-max) {
           padding: 20px;
+          background-position: 0 0;
         }
       }
     }
